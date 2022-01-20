@@ -22,7 +22,7 @@ $seller = $block->getSeller();
 if (!$seller) {
     return;
 }
-$gstinValue = $seller->getData('gstin');
+$gstinValue = isset($seller['gstin']) ? $seller['gstin'] : "";
 $ids = [];
 ?>
 <div class="fieldset-wrapper admin__collapsible-block-wrapper">
