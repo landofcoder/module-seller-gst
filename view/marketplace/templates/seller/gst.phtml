@@ -28,19 +28,19 @@ $ids = [];
 <div class="fieldset-wrapper admin__collapsible-block-wrapper">
     <div class="fieldset-wrapper-title" data-toggle="collapse" data-target="#gstin">
         <strong class="admin__collapsible-title">
-            <?= __("GSTIN Number"); ?>
+            <?= $block->escapeHtml(__("GSTIN Number")); ?>
         </strong>
     </div>
     <div id="gstin" class="admin__fieldset-wrapper-content admin__collapsible-content">
         <fieldset class="admin__fieldset" name="general">
             <fieldset class="admin__field">
                 <label class="admin__field-label">
-                    <span><?= __('GSTIN') ?></span>
+                    <span><?= $block->escapeHtml(__('GSTIN')) ?></span>
                 </label>
                 <div class="admin__field-control">
                     <input type="text" name="gstin" id="gstin" class="admin__control-text"
-                                   title="Gstin" value="<?= $block->escapeHtmlAttr($gstinValue) ?>">
-                            <p><?= __('Please enter your GSTIN Number') ?></p>
+                                   title="<?= $block->escapeHtmlAttr(__('GSTIN')) ?>" value="<?= $block->escapeHtmlAttr($gstinValue) ?>">
+                            <p><?= $block->escapeHtml(__('Please enter your GSTIN Number')) ?></p>
                 </div>
             </fieldset>
         </fieldset>
